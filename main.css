@@ -1,10 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-header, h2, section h3, form button, footer{
+header,
+h2,
+section h3,
+form button,
+footer {
     font-family: 'Bungee', cursive;
     font-weight: normal;
 }
@@ -34,7 +38,8 @@ header nav li a {
     margin: 0 auto;
 }
 
-header .container, section .container {
+header .container,
+section .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -55,6 +60,20 @@ section {
 h2 {
     padding-left: 40px;
 }
+
+.titulo {
+
+    text-decoration: none;
+
+}
+
+.produto img {
+    display: block;
+    width: 250px; 
+    height: 290px;
+    margin: 0 auto;
+}
+
 
 section {
     color: #182c61;
@@ -89,7 +108,7 @@ button {
     color: #ecf0f1;
     padding: 10px;
     border: solid 1px rgb(142, 142, 186);
-    border-radius: 20px;    
+    border-radius: 20px;
 }
 
 .button-container {
@@ -117,6 +136,7 @@ footer {
     column-gap: 20px;
     row-gap: 20px;
     padding-left: 20px;
+    text-align: center;
 }
 
 aside {
