@@ -7,10 +7,14 @@
 header,
 h2,
 section h3,
-form button,
+form button, 
 footer {
     font-family: 'Bungee', cursive;
     font-weight: normal;
+}
+
+h4, h5 {
+    font-family: 'Courier New', Courier, monospace; 
 }
 
 
@@ -27,9 +31,13 @@ header nav li {
     font-size: 18px;
 }
 
-header nav li a {
+header nav li {
     color: #ecf0f1;
     text-decoration: none;
+}
+
+ ul a {
+    color: #ecf0f1
 }
 
 .container {
@@ -61,6 +69,18 @@ h2 {
     padding-left: 40px;
 }
 
+a, h4 {
+    text-decoration: none; 
+    color: black;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+h5 { 
+    color: rgb(74, 73, 73);
+    padding-bottom: 15px;
+}
+
 .titulo {
 
     text-decoration: none;
@@ -69,9 +89,10 @@ h2 {
 
 .produto img {
     display: block;
-    width: 250px; 
+    width: 250px;
     height: 290px;
     margin: 0 auto;
+    padding-bottom: 15px;
 }
 
 
@@ -147,27 +168,23 @@ aside .noticia {
     margin-bottom: 24px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    .container {
-        max-width: 90%;
-    }
-
-    .botao-menu {
-        display: none;
-    }
-
-    .destaque .produto a {
-        font-size: 1.5em;
-    }
-
+/* Estilos para telas menores (celular) */
+@media screen and (max-width: 767px) {
     .produtos {
-        grid-template-columns: repeat(2, 49%);
+        grid-template-columns: 100%; /* Um produto por linha */
     }
 }
 
-/* Estilos para telas maiores */
+/* Estilos para telas de tamanho médio (tablet) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .produtos {
+        grid-template-columns: repeat(2, 49%); /* Dois produtos por linha */
+    }
+}
+
+/* Estilos para telas maiores (desktop) */
 @media screen and (min-width: 1024px) {
-    .botao-menu {
-        display: none;
+    .produtos {
+        grid-template-columns: repeat(4, 24%); /* Quatro produtos por linha */
     }
 }
