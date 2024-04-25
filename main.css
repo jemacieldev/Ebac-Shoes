@@ -2,42 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Roboto, sans-serif;
 }
 
-header,
-h2,
-section h3,
-form button, 
-footer {
+
+h1, h2, .titulo {
     font-family: 'Bungee', cursive;
-    font-weight: normal;
 }
 
-h4, h5 {
-    font-family: 'Courier New', Courier, monospace; 
-}
-
-
-header {
-    padding: 16px 0;
-    background-color: #182c61;
-    color: #ecf0f1;
-}
-
-header nav li {
-    display: inline;
-    margin-left: 16px;
-    color: #ecf0f1;
-    font-size: 18px;
-}
-
-header nav li {
-    color: #ecf0f1;
-    text-decoration: none;
-}
-
- ul a {
-    color: #ecf0f1
+body {
+    background-color: #eeeeee;
 }
 
 .container {
@@ -46,145 +20,233 @@ header nav li {
     margin: 0 auto;
 }
 
-header .container,
-section .container {
+header .container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-}
-
-.store-front {
-    height: 450px;
-}
-
-section .container {
-    align-items: flex-start;
-}
-
-section {
-    padding: 24px 0;
-}
-
-h2 {
-    padding-left: 40px;
-}
-
-a, h4 {
-    text-decoration: none; 
-    color: black;
-    padding-bottom: 20px;
-    font-size: 20px;
-}
-
-h5 { 
-    color: rgb(74, 73, 73);
-    padding-bottom: 15px;
-}
-
-.titulo {
-
-    text-decoration: none;
-
-}
-
-.produto img {
-    display: block;
-    width: 250px;
-    height: 290px;
-    margin: 0 auto;
-    padding-bottom: 15px;
-}
-
-
-section {
-    color: #182c61;
-}
-
-section p {
-    margin-bottom: 8px;
-}
-
-.store-front {
-    margin-right: 32px;
-}
-
-#contact .container {
-    display: block;
-}
-
-.contact-methods {
-    display: flex;
-    justify-content: center;
     align-items: center;
-
 }
 
-
-section h3 {
-    margin-bottom: 16px;
-}
-
-button {
-    background-color: rgb(142, 142, 186);
-    color: #ecf0f1;
-    padding: 10px;
-    border: solid 1px rgb(142, 142, 186);
-    border-radius: 20px;
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-}
-
-button:hover {
-    background-color: rgb(142, 142, 186);
-    color: ecf0f1;
-    transform: scale(1.1);
-}
-
-footer {
-    background-color: #182c61;
-    color: #ecf0f1;
+header {
+    background-color: #a36b22;
+    color: #fff;
     padding: 16px 0;
 }
 
-.produtos .produto {
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sobre .container {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+}
+
+.sobreImg {
+    max-width: 50%;
+}
+
+.sobreImg img {
+    width: 100%;
+}
+
+.sobreTexto {
+    width: 50%;
+    padding: 0 0 0 50px;
+}
+
+.sobreTexto h2,
+.produtos h2 {
+    padding-bottom: 10px;
+    border-bottom: 4px solid #a36b22;
+}
+
+.sobreTexto p {
+    margin-top: 40px;
+    text-align: justify;
+}
+
+.produtos .container {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.conteudoprodutos {
+    margin-top: 40px;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 20px;
-    row-gap: 20px;
-    padding-left: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 10px;
+}
+
+.produtoImg {
+    width: 100%;
+    overflow: hidden;
+}
+
+.produtoImg img {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.produtoImg img:hover {
+    transform: scale(1.1);
+}
+
+.produtoInfo {
+    height: auto;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.produtoInfo h3 {
+    margin-top: 20px;
+}
+
+.produtoInfo p {
+    margin-top: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.produtoPrice {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    background-color: #a36b22;
+    margin: 20px 0;
+
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
     text-align: center;
 }
 
-aside {
-    padding-left: 40px;
-}
+/* Media query para tablets */
+@media screen and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+    }
 
-aside .noticia {
-    margin-bottom: 24px;
-}
+    header .container {
+        flex-direction: column;
+    }
 
-/* Estilos para telas menores (celular) */
-@media screen and (max-width: 767px) {
-    .produtos {
-        grid-template-columns: 100%; /* Um produto por linha */
+    header {
+        padding: 20px 0;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav ul {
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        margin-right: 40px;
+    }
+
+    .sobre .container {
+        display: block;
+    }
+
+    .sobreImg {
+        max-width: 100%;
+    }
+
+    .sobreTexto {
+        margin-top: 40px;
+        padding: 0;
+    }
+
+    .conteudoprodutos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 10px;
     }
 }
 
-/* Estilos para telas de tamanho médio (tablet) */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    .produtos {
-        grid-template-columns: repeat(2, 49%); /* Dois produtos por linha */
+/* Media query para dispositivos móveis */
+@media screen and (max-width: 640px) {
+    .container {
+        max-width: 90%;
+    }
+
+    header .container {
+        flex-direction: column;
+    }
+
+    header {
+        padding: 20px 0;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav ul {
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        margin-right: 40px;
+    }
+
+    .sobre .container {
+        display: block;
+    }
+
+    .sobreImg {
+        max-width: 100%;
+    }
+
+    .sobreloja {
+        margin-top: 40px;
+        padding: 0;
+    }
+
+    .conteudoprodutos {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px 0;
     }
 }
 
-/* Estilos para telas maiores (desktop) */
-@media screen and (min-width: 1024px) {
-    .produtos {
-        grid-template-columns: repeat(4, 24%); /* Quatro produtos por linha */
-    }
-}
+  
